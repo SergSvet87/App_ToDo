@@ -1,0 +1,70 @@
+.App {
+  text-align: center;
+}
+
+h1 {
+  margin: 30px 0 10px;
+  text-align: center;
+  color: #f1f1f1;
+  text-shadow: 0px 20px 5px #212121;
+}
+
+.todo {
+  width: 950px;
+  height: 600px;
+  margin: 30px auto 80px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  box-shadow: 1px 2px 20px #f3f3f3;
+  border-radius: 10px;
+  border: 2px solid #f1f1f1;
+
+  &__sidebar {
+    position: relative;
+    top: -1px;
+    width: 250px;
+    height: 100.6%;
+    background-color: #f4f6f8;
+    font-size: 16px;
+    border-right: 1px solid #f1f1f1;
+    padding: 60px 20px;
+    border-radius: 8px;
+  }
+
+  &__tasks {
+    width: 100%;
+    height: 100%;
+    padding: 60px 40px;
+
+    color: #f1f1f1;
+  }
+}
+
+.field {
+  background-color: #fff;
+  border: 1px solid #efefef;
+  border-radius: 5px;
+  padding: 8px 12px;
+
+  &:focus {
+    border-color:#bcbcbc;
+  }
+}
+
+.button {
+  padding: 10px 20px;
+  background-color: #4dd599;
+  color: #fff;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+
+  &:hover {
+    background-color: darken($color: #4dd599, $amount: 8%);
+  }
+
+  &:active  {
+    background-color: darken($color: #4dd599, $amount: 14%);
+  }
+}
