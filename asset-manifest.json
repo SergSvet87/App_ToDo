@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/App_ToDo/static/css/main.2ea92fb6.css",
-    "main.js": "/App_ToDo/static/js/main.b7a05f67.js",
+    "main.css": "/App_ToDo/static/css/main.f8990670.css",
+    "main.js": "/App_ToDo/static/js/main.e8d8ad06.js",
     "static/media/close.svg": "/App_ToDo/static/media/close.b83c20235d017b227db194cb10e220d9.svg",
     "static/media/remove.svg": "/App_ToDo/static/media/remove.f5660af3f4262fb01687c538e6caa2fa.svg",
     "index.html": "/App_ToDo/index.html",
     "static/media/edit.svg": "/App_ToDo/static/media/edit.01cd7018ebb21e50045569448088ba16.svg",
-    "static/media/add.svg": "/App_ToDo/static/media/add.c4fa83e1531853436062fd8c7a459787.svg",
-    "main.2ea92fb6.css.map": "/App_ToDo/static/css/main.2ea92fb6.css.map",
-    "main.b7a05f67.js.map": "/App_ToDo/static/js/main.b7a05f67.js.map"
+    "static/media/add.svg": "/App_ToDo/static/media/add.efc5b328e6b5f4ca60b437774f3ac8cb.svg",
+    "main.f8990670.css.map": "/App_ToDo/static/css/main.f8990670.css.map",
+    "main.e8d8ad06.js.map": "/App_ToDo/static/js/main.e8d8ad06.js.map"
   },
   "entrypoints": [
-    "static/css/main.2ea92fb6.css",
-    "static/js/main.b7a05f67.js"
+    "static/css/main.f8990670.css",
+    "static/js/main.e8d8ad06.js"
   ]
 }
