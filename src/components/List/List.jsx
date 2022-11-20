@@ -15,10 +15,11 @@ const List = ({
   onClickItem,
   activeItem,
 }) => {
-  const removeList = (item) => {
-    if (window.confirm('Ви дійсно бажаєте видалити цей список?')) {
-      axios.delete(`http://localhost:3005/lists/${item.id}`).then(() => {
-        onRemove(item.id)
+  const removeList = (id) => {
+    console.log(id)
+    if (window.confirm('Ви дійсно бажаєте видалити список?')) {
+      axios.delete(`http://localhost:3005/lists/${id}`).then(() => {
+        onRemove(id)
       })
     }
   }
@@ -28,7 +29,9 @@ const List = ({
       {items.map((item, index) => (
         <li
           className={classNames(item.className, item.classNameBold, {
-            active:  activeItem && activeItem.id === item.id
+            active: item.active
+              ? item.active
+              : activeItem && activeItem.id === item.id,
           })}
           key={index}
           onClick={onClickItem ? () => onClickItem(item) : null}

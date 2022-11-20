@@ -8,8 +8,9 @@
     border-radius: 7px;
     padding: 18px;
     position: relative;
-    top: -25px;
+    top: 0px;
     left: 10px;
+    z-index: 2;
 
     &>.field {
       width: 100%;

@@ -6,7 +6,7 @@ import Badge from '../Badge/Badge'
 import closeSvg from '../../assets/img/icons/close.svg'
 import './AddList.scss'
 
-const BTN_ADD_LIST = 'Add List'
+const BTN_ADD_LIST = 'Додати до списку'
 
 const AddList = ({ colors, onAddList }) => {
   const [visiblePopup, setVisiblePopup] = React.useState(false)
@@ -41,15 +41,13 @@ const AddList = ({ colors, onAddList }) => {
       })
       .then(({ data }) => {
         const color = colors.filter((color) => color.id === selectedColor)[0]
-          .name
-        const listObj = { ...data, color: { name: color } }
+        const listObj = { ...data, color, tasks: [] }
 
         onAddList(listObj)
         onClose()
       })
-      .finally(() => {
-        setIsLoading(false)
-      })
+      .catch(() => alert('Помилка при додаванні нового списку!'))
+      .finally(() => setIsLoading(false))
   }
 
   return (
@@ -113,7 +111,7 @@ const AddList = ({ colors, onAddList }) => {
             ))}
           </div>
           <button className="button" onClick={addList}>
-            {isLoading ? 'Добавление....' : 'Add New List'}
+            {isLoading ? 'Додавання....' : 'Add New List'}
           </button>
         </div>
       )}

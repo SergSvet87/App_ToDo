@@ -1,6 +1,6 @@
 .list {
   $self: &;
-  margin-bottom: 60px;
+  margin-bottom: 20px;
 
   &__bold {
     font-weight: bold;
@@ -42,10 +42,13 @@
     span {
       flex: 1;
       text-overflow: ellipsis;
-      text-transform: capitalize;
       overflow: hidden;
       width: 160px;
       white-space: nowrap;
+
+      &::first-letter {
+        text-transform: capitalize;
+      }
     }
 
     &:hover {

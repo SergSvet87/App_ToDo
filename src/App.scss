@@ -3,7 +3,7 @@
 }
 
 h1 {
-  margin: 30px 0 10px;
+  margin: 20px 0 10px;
   text-align: center;
   color: #f1f1f1;
   text-shadow: 0px 20px 5px #212121;
@@ -11,7 +11,7 @@ h1 {
 
 .todo {
   width: 950px;
-  height: 600px;
+  height: 550px;
   margin: 30px auto 80px;
   display: flex;
   justify-content: flex-start;
@@ -19,6 +19,17 @@ h1 {
   box-shadow: 1px 2px 20px #f3f3f3;
   border-radius: 10px;
   border: 2px solid #f1f1f1;
+
+  &__center {
+    height: 260px;
+    text-overflow: ellipsis;
+    overflow-y: scroll;
+    margin-bottom: 30px;
+
+    &>.list {
+      margin: 10px 0;
+    }
+  }
 
   &__sidebar {
     position: relative;
@@ -28,20 +39,23 @@ h1 {
     background-color: #f4f6f8;
     font-size: 16px;
     border-right: 1px solid #f1f1f1;
-    padding: 60px 20px;
+    padding: 40px 20px;
     border-radius: 8px;
   }
 
   &__tasks {
+    display: flex;
+    flex-direction: column;
     width: 100%;
     height: 100%;
-    padding: 60px 40px;
-
+    padding: 30px 40px;
     color: #f1f1f1;
+    overflow-y: scroll;
   }
 }
 
 .field {
+  font-size: 16px;
   background-color: #fff;
   border: 1px solid #efefef;
   border-radius: 5px;
@@ -53,8 +67,9 @@ h1 {
 }
 
 .button {
-  padding: 10px 20px;
+  padding: 9px 20px;
   background-color: #4dd599;
+  font-size: 16px;
   color: #fff;
   border-radius: 5px;
   border: none;
@@ -65,6 +80,25 @@ h1 {
   }
 
   &:active  {
-    background-color: darken($color: #4dd599, $amount: 14%);
+    background-color: darken(#4dd599, 14%);
+    color: darken(#fff, 10%);
+  }
+
+  &:disabled {
+    background: #d8d8d8;
+  }
+
+  &_gray {
+    background-color: #f4f6f8;
+    color: #444;
+
+    &:hover {
+      background: darken(#f4f6f8, 7%)
+    }
+
+    &:active  {
+      background-color: darken(#f4f6f8, 14%);
+      color: lighten(#444, 15%);
+    }
   }
 }

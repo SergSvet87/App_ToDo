@@ -1,0 +1,36 @@
+.form {
+  cursor: pointer;
+
+  &__new-task{
+    display: flex;
+    align-items: center;
+    opacity: 0.4;
+    transition: opacity .15s ease-in-out;
+
+    &:hover {
+      opacity: 0.9;
+    }
+  }
+
+  img {
+    margin-left: 1px;
+  }
+
+  span {
+    margin-left: 25px;
+  }
+
+  .field {
+    display: block;
+    width: 100%;
+    margin-bottom: 15px;
+  }
+
+  &__btn {
+    margin-top: 10px;
+
+    button {
+      margin-right: 15px;
+    }
+  }
+}
